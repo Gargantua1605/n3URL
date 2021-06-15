@@ -1,1 +1,1 @@
-[Aditya Sriram] (https://github.com/aweditya)
+Aditya Sriram (https://github.com/aweditya)
