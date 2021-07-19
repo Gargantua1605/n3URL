@@ -7,3 +7,6 @@ processed-data/python-model-1/data/right_data.txt
 processed-data/python-model-1/labels/left_label.txt
 processed-data/python-model-1/labels/rest_label.txt
 processed-data/python-model-1/labels/right_label.txt
+processed-data/python-model-2/test_left_data.txt
+processed-data/python-model-2/test_right_data.txt
+models/Deep_Conv_Net_10Channel_RestData_Excluded/.ipynb_checkpoints
