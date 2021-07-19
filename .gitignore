@@ -1,9 +1,9 @@
 datasets/
-processed-data/data/both_feet_data.txt
-processed-data/data/both_fists_data.txt
-processed-data/data/left_data.txt
-processed-data/data/rest_data.txt
-processed-data/data/right_data.txt
-processed-data/labels/left_label.txt
-processed-data/labels/rest_label.txt
-processed-data/labels/right_label.txt
+processed-data/python-model-1/data/both_feet_data.txt
+processed-data/python-model-1/data/both_fists_data.txt
+processed-data/python-model-1/data/left_data.txt
+processed-data/python-model-1/data/rest_data.txt
+processed-data/python-model-1/data/right_data.txt
+processed-data/python-model-1/labels/left_label.txt
+processed-data/python-model-1/labels/rest_label.txt
+processed-data/python-model-1/labels/right_label.txt
