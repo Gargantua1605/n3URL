@@ -265,9 +265,15 @@ player_paddle = Paddle()
 ball = Ball(player_paddle.x + (player_paddle.width // 2), player_paddle.y - player_paddle.height)
 
 # Create the EEG Classififer
-model_json_file = '/home/aditya/Projects/iitb/n3URL/models/Deep_Conv_Net_10Channel_RestData_Excluded/Deep_Conv_Net_10Channel_model.json'
-model_h5_file = '/home/aditya/Projects/iitb/n3URL/models/Deep_Conv_Net_10Channel_RestData_Excluded/Deep_Conv_Net_10Channel_model.h5'
+model_json_file = 'models/Deep_Conv_Net_10Channel_RestData_Excluded/Deep_Conv_Net_10Channel_model.json'
+model_h5_file = 'models/Deep_Conv_Net_10Channel_RestData_Excluded/Deep_Conv_Net_10Channel_model.h5'
 classifier = EEGClassifier(model_json_file, model_h5_file)
+
+left_as_right = 0
+left_as_left = 0
+right_as_right = 0
+right_as_left = 0
+
 
 run = True
 while run:
@@ -278,11 +284,6 @@ while run:
 	wall.draw_wall()
 	player_paddle.draw()
 	ball.draw()
-
-	left_as_right = 0
-	left_as_left = 0
-	right_as_right = 0
-	right_as_left = 0
 
 	if live_ball:
 		# Move the objects
@@ -323,8 +324,6 @@ while run:
 			draw_text('YOU WON!', font, text_colour, 240, screen_height // 2 + 50)
 			draw_text('CLICK ANYWHERE TO START', font, text_colour, 100, screen_height // 2 + 100)
 		elif game_over == -1:
-			accuracy = (left_as_left + right_as_right) / (left_as_left + left_as_right + right_as_left + right_as_right)
-			print("Accuracy", accuracy)
 			draw_text('YOU LOST!', font, text_colour, 240, screen_height // 2 + 50)
 			draw_text('CLICK ANYWHERE TO START', font, text_colour, 100, screen_height // 2 + 100)
 	
@@ -340,4 +339,6 @@ while run:
 
 	pygame.display.update()
 
+accuracy = (left_as_left + right_as_right) / (left_as_left + left_as_right + right_as_left + right_as_right)
+print("Accuracy", accuracy)
 pygame.quit()
